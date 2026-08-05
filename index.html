@@ -46,10 +46,10 @@
   }
   .tag-pill .dot{width:7px; height:7px; border-radius:50%; background:var(--ember); box-shadow:0 0 8px 2px var(--ember);}
 
-  /* ===== BRAND LOCKUP (logo + name) ===== */
-  .brand-lockup{
-    position:relative; z-index:2; display:flex; align-items:center; gap:14px;
-    justify-content:flex-end; margin-bottom:22px;
+  /* ===== BRAND LOCKUP (logo + name) — top of hero, under the nav ===== */
+  .hero-top-brand{
+    position:absolute; top:32px; right:5vw; left:28px; z-index:3;
+    display:flex; align-items:center; gap:14px; justify-content:flex-end;
   }
   .brand-lockup-logo{
     height:48px; width:auto; display:block; border-radius:10px;
@@ -296,7 +296,7 @@
   @media (max-width:860px){
     .hero .wrap{position:static; padding:100px 28px 0;}
     .hero-content{text-align:center; margin:0 auto;}
-    .brand-lockup{justify-content:center;}
+    .hero-top-brand{position:static; justify-content:center; margin:24px 0 0;}
     .tag-pill{margin-left:auto; margin-right:auto;}
     .hero-socials-row{justify-content:center;}
     .subtitle{margin:0 auto 24px;}
@@ -336,13 +336,13 @@
     <div class="hero-bg"></div>
     <div class="skyline" id="skyline"></div>
 
+    <div class="hero-top-brand">
+      <img src="https://files.catbox.moe/7yhvol.webp" alt="Dream Town" class="brand-lockup-logo" referrerpolicy="no-referrer">
+      <div class="brand-lockup-text">Dream Town</div>
+    </div>
+
     <div class="wrap">
       <div class="hero-content">
-
-        <div class="brand-lockup">
-          <img src="https://files.catbox.moe/7yhvol.webp" alt="Dream Town" class="brand-lockup-logo" referrerpolicy="no-referrer">
-          <div class="brand-lockup-text">Dream Town</div>
-        </div>
 
         <div class="tag-pill"><span class="dot"></span> رقم 1 كأفضل مجتمع RP في عالم السوني</div>
 
