@@ -45,6 +45,20 @@
     margin-bottom:20px;
   }
   .tag-pill .dot{width:7px; height:7px; border-radius:50%; background:var(--ember); box-shadow:0 0 8px 2px var(--ember);}
+
+  /* ===== BRAND LOCKUP (logo + name) ===== */
+  .brand-lockup{
+    position:relative; z-index:2; display:flex; align-items:center; gap:14px;
+    justify-content:flex-end; margin-bottom:22px;
+  }
+  .brand-lockup-logo{
+    height:48px; width:auto; display:block; border-radius:10px;
+  }
+  .brand-lockup-text{
+    font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:800;
+    font-size:1.7rem; color:var(--paper); letter-spacing:.5px; line-height:1;
+  }
+
   .hero .wrap{
     position:absolute; bottom:90px; left:0; right:0;
     max-width:100%; margin:0;
@@ -282,6 +296,7 @@
   @media (max-width:860px){
     .hero .wrap{position:static; padding:100px 28px 0;}
     .hero-content{text-align:center; margin:0 auto;}
+    .brand-lockup{justify-content:center;}
     .tag-pill{margin-left:auto; margin-right:auto;}
     .hero-socials-row{justify-content:center;}
     .subtitle{margin:0 auto 24px;}
@@ -323,6 +338,12 @@
 
     <div class="wrap">
       <div class="hero-content">
+
+        <div class="brand-lockup">
+          <img src="https://files.catbox.moe/7yhvol.webp" alt="Dream Town" class="brand-lockup-logo" referrerpolicy="no-referrer">
+          <div class="brand-lockup-text">Dream Town</div>
+        </div>
+
         <div class="tag-pill"><span class="dot"></span> رقم 1 كأفضل مجتمع RP في عالم السوني</div>
 
         <div class="brand-tagline"><b>D T</b><span class="sep">·</span>حيث تصبح الأحلام واقع</div>
@@ -562,7 +583,6 @@
 <footer>
   <div class="wrap">
     <div class="footer-top">
-      <
       <a href="index.html" class="logo-img"><img src="https://files.catbox.moe/zom6x4.webp" alt=""></a>
     </div>
     <div class="footer-bottom">© 2026 Dream Town. جميع الحقوق محفوظة | تم الإنشاء بواسطة <a href="https://discord.com/users/1149991645203406848" target="_blank" rel="noopener" style="color:var(--ember); font-weight:700;">iDOM</a></div>
