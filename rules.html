@@ -6,8 +6,12 @@
 <title>القوانين | Dream Town</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  .logo-img{display:flex; align-items:center;}
-  .logo-img img{height:42px; width:auto; display:block;}
+  .logo-img{display:flex; align-items:center; gap:10px;}
+  .logo-img img{height:38px; width:auto; display:block;}
+  .logo-text{
+    font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:800;
+    font-size:1.15rem; color:var(--paper); letter-spacing:.3px; white-space:nowrap;
+  }
   .icon-btn{
     width:34px; height:34px; border-radius:50%; border:1px solid #555;
     display:flex; align-items:center; justify-content:center; font-size:.9rem; color:#ccc;
@@ -157,7 +161,10 @@
 
 <header>
   <nav>
-    <a href="index.html" class="logo-img"><img src="https://files.catbox.moe/fc1899.png" alt="" referrerpolicy="no-referrer"></a>
+    <a href="index.html" class="logo-img">
+      <img src="https://files.catbox.moe/7yhvol.webp" alt="Dream Town" referrerpolicy="no-referrer">
+      <span class="logo-text">Dream Town</span>
+    </a>
     <ul class="navlinks">
       <li><a href="index.html">الرئيسية</a></li>
       <li><a href="creativity.html">الإبداع</a></li>
@@ -176,6 +183,7 @@
   <!-- HERO -->
   <section class="rules-hero">
     <div class="wrap">
+
       <h1>بلدة الأحلام</h1>
       <div class="rules-intro">
         <p>جميع القوانين التالية <b>ملزمة لجميع اللاعبين</b> بدون استثناء. الجهل بالقانون ليس عذرًا. اضغط على أي قسم لعرض تفاصيله.</p>
