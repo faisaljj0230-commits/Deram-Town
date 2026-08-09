@@ -6,7 +6,7 @@
 <title>Dream Town | دريم تاون</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  /* ===== HERO ===== */
+  /* hero */
   .hero{
     position:relative; min-height:92vh; overflow:hidden;
   }
@@ -33,13 +33,14 @@
     background:linear-gradient(180deg, #2a1712, #0e0906);
     border-top:1px solid rgba(255,140,66,0.2);
   }
-  .navcta{display:flex; gap:8px; align-items:center;}
+  .navcta{display:flex; gap:8px; align-items:center; flex-shrink:0;}
   .icon-btn{
     width:34px; height:34px; border-radius:50%; border:1px solid #555;
     display:flex; align-items:center; justify-content:center; color:#ccc;
-    background:#3a3a3a;
+    background:#3a3a3a; flex-shrink:0;
   }
   .icon-btn svg{width:18px; height:18px;}
+  .store-btn{white-space:nowrap; flex-shrink:0;}
   .store-btn svg{width:16px; height:16px;}
   .tag-pill{
     position:relative; z-index:2; display:inline-flex; align-items:center; gap:10px;
@@ -82,7 +83,7 @@
   .hero-socials-row a:hover{border-color:var(--ember); color:var(--ember); background:rgba(255,90,31,0.1);}
   .hero-socials-row svg{width:18px; height:18px;}
 
-  /* ===== ABOUT US SECTION ===== */
+  /* about us section */
   .about-section{padding:100px 0;}
   .about-eyebrow{
     display:flex; align-items:center; gap:10px; justify-content:flex-end;
@@ -114,7 +115,7 @@
   .about-card h3{font-size:1.05rem; font-weight:700; margin-bottom:10px;}
   .about-card p{color:var(--mist); font-size:.87rem; line-height:1.8;}
 
-  /* ===== COMMUNITY SECTION ===== */
+  /* community section */
   .community-section{
     background:#000;
     padding:100px 0;
@@ -145,7 +146,7 @@
   }
   .community-label{color:var(--mist); font-size:.92rem;}
 
-  /* ===== EVENTS SECTION ===== */
+  /* events section */
   .events-section{padding:100px 0;}
   .events-head{text-align:center; max-width:600px; margin:0 auto 40px;}
   .events-head h2{
@@ -214,7 +215,7 @@
   .page-btn:hover{border-color:var(--ember); color:var(--ember);}
   .page-btn:disabled{opacity:.35; cursor:default;}
 
-  /* ===== FAQ SECTION ===== */
+  /* faq section */
   .faq-section{padding:100px 0;}
   .faq-head{text-align:center; margin-bottom:50px;}
   .faq-eyebrow{
@@ -254,7 +255,7 @@
   .faq-item.open .faq-answer{max-height:200px; padding:0 22px 22px;}
   .faq-answer p{color:var(--mist); font-size:.9rem; line-height:1.9;}
 
-  /* ===== STAY UPDATED SECTION ===== */
+  /* stay updated section */
   .stay-section{padding:100px 0;}
   .stay-grid{
     display:flex; justify-content:space-between; align-items:center;
@@ -282,7 +283,7 @@
   .stay-text p{color:var(--mist); font-size:.95rem; line-height:1.8;}
   .stay-text p a{color:var(--ember); font-weight:700;}
 
-  /* ===== FOOTER OVERRIDE ===== */
+  /* footer override */
   footer{
     background:#1a1a1a;
     border-top:3px solid var(--ember);
