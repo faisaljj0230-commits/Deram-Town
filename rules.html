@@ -12,13 +12,17 @@
     font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:800;
     font-size:1.15rem; color:var(--paper); letter-spacing:.3px; white-space:nowrap;
   }
+  .navcta{display:flex; gap:8px; align-items:center; flex-shrink:0;}
   .icon-btn{
     width:34px; height:34px; border-radius:50%; border:1px solid #555;
-    display:flex; align-items:center; justify-content:center; font-size:.9rem; color:#ccc;
-    background:#3a3a3a;
+    display:flex; align-items:center; justify-content:center; color:#ccc;
+    background:#3a3a3a; flex-shrink:0;
   }
+  .icon-btn svg{width:18px; height:18px;}
+  .store-btn{white-space:nowrap; flex-shrink:0;}
+  .store-btn svg{width:16px; height:16px;}
 
-  /* ===== RULES HERO ===== */
+  /* rules hero */
   .rules-hero{
     position:relative; padding:130px 0 60px; overflow:hidden;
     background:radial-gradient(ellipse 70% 60% at 80% 0%, rgba(255,90,31,0.14), transparent 65%);
@@ -36,7 +40,7 @@
     display:flex; align-items:center; gap:6px; justify-content:flex-end;
   }
 
-  /* ===== ACCORDION (CATEGORY LEVEL) ===== */
+  /* accordion (category level) */
   .rules-section{padding:0 0 100px;}
   .rules-accordion{display:flex; flex-direction:column; gap:2px;}
   .rules-cat{background:var(--deep); border-right:3px solid var(--line);}
@@ -62,7 +66,7 @@
   }
   .rules-cat.open .rules-cat-body{max-height:6000px; padding:10px 26px 40px;}
 
-  /* ===== RULE ITEM ROWS ===== */
+  /* rule item rows */
   .rule-row{
     display:flex; align-items:flex-start; justify-content:space-between; gap:18px;
     padding:16px 0; border-bottom:1px solid rgba(255,255,255,0.05);
@@ -83,7 +87,7 @@
   }
   .rule-penalty.mute{background:#3a2a10; border-color:#6b4a1a; color:#ffcf80;}
 
-  /* ===== DEFINITIONS BOX ===== */
+  /* definitions box */
   .def-box{
     margin-top:24px; background:rgba(255,90,31,0.06); border:1px solid rgba(255,90,31,0.25);
     border-radius:10px; padding:20px 22px; text-align:right;
@@ -92,7 +96,7 @@
   .def-box p:last-child{margin-bottom:0;}
   .def-box b{color:var(--ember); font-weight:700;}
 
-  /* ===== SAFE ZONES GRID ===== */
+  /* safe zones grid */
   .zones-note{color:var(--paper); font-size:.92rem; line-height:1.9; text-align:right; margin-bottom:20px;}
   .zones-note b{color:var(--gold);}
   .zones-grid{display:grid; grid-template-columns:repeat(5, 1fr); gap:10px; margin-bottom:18px;}
@@ -108,7 +112,7 @@
     padding:10px 16px; border-radius:8px;
   }
 
-  /* ===== TABLE ===== */
+  /* table */
   .rules-table-wrap{margin-top:28px; overflow-x:auto;}
   .rules-table{width:100%; border-collapse:collapse; font-size:.85rem;}
   .rules-table th{
@@ -131,7 +135,7 @@
   }
   .open-case-card span{color:var(--mist); font-size:.78rem; text-transform:uppercase; letter-spacing:1px;}
 
-  /* ===== SETTINGS GUIDE ===== */
+  /* settings guide */
   .settings-note{color:var(--paper); font-size:.92rem; text-align:right; margin-bottom:20px;}
   .setting-item{margin-bottom:16px;}
   .setting-item h4{
@@ -142,7 +146,7 @@
     padding:50px 20px; text-align:center; color:var(--mist); font-size:.85rem;
   }
 
-  /* ===== FOOTER OVERRIDE ===== */
+  /* footer override */
   footer{
     background:#1a1a1a;
     border-top:3px solid var(--ember);
@@ -173,7 +177,13 @@
       <li><a href="rules.html" class="active">القوانين</a></li>
     </ul>
     <div class="navcta">
-      <a class="icon-btn" href="#" aria-label="اللغة">🌐</a>
+      <a class="icon-btn" href="#" aria-label="اللغة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+      </a>
+      <a href="#" class="btn btn-primary store-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        المتجر
+      </a>
     </div>
   </nav>
 </header>
