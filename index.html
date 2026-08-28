@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dream Town | دريم تاون</title>
 <link rel="stylesheet" href="style.css">
+<script src="lang.js" defer></script>
 <style>
   /* hero */
   .hero{
@@ -42,13 +43,7 @@
   .icon-btn svg{width:18px; height:18px;}
   .store-btn{white-space:nowrap; flex-shrink:0;}
   .store-btn svg{width:16px; height:16px;}
-  .tag-pill{
-    position:relative; z-index:2; display:inline-flex; align-items:center; gap:10px;
-    background:rgba(23,18,16,0.7); border:1px solid var(--line); border-radius:999px;
-    padding:8px 18px; font-size:.85rem; color:var(--mist); backdrop-filter:blur(6px);
-    margin-bottom:20px;
-  }
-  .tag-pill .dot{width:7px; height:7px; border-radius:50%; background:var(--ember); box-shadow:0 0 8px 2px var(--ember);}
+
 
   .logo-img{display:flex; align-items:center; gap:10px;}
   .logo-img img{height:38px; width:auto; display:block;}
@@ -58,30 +53,49 @@
   }
 
   .hero .wrap{
-    position:absolute; bottom:90px; left:0; right:0;
+    position:absolute; top:50%; left:0; right:0;
+    transform:translateY(-50%);
     max-width:100%; margin:0;
     padding-right:5vw; padding-left:28px;
     z-index:2;
   }
   .hero-content{
-    max-width:600px;
+    max-width:620px;
     text-align:right; margin-left:auto;
   }
-  .brand-tagline{
-    font-family:'IBM Plex Mono', monospace; font-size:.95rem; letter-spacing:1px;
-    color:var(--paper); margin-bottom:14px; text-align:right;
+  .hero-pill{
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(23,18,16,0.7); border:1px solid var(--line); border-radius:999px;
+    padding:7px 16px; margin-bottom:22px; backdrop-filter:blur(6px);
   }
-  .brand-tagline b{color:var(--ember); font-weight:700;}
-  .brand-tagline .sep{color:var(--gold); margin:0 6px;}
-  .subtitle{font-size:1.02rem; color:var(--mist); line-height:1.9; margin-bottom:24px; max-width:480px; margin-left:auto;}
-  .hero-socials-row{display:flex; gap:10px; justify-content:flex-end;}
-  .hero-socials-row a{
-    width:38px; height:38px; border-radius:50%; border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center; color:var(--mist);
-    transition:all .2s;
+  .hero-pill img{width:16px; height:16px; display:block;}
+  .hero-pill span{
+    font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:800; font-size:.78rem;
+    letter-spacing:1px; color:var(--paper);
   }
-  .hero-socials-row a:hover{border-color:var(--ember); color:var(--ember); background:rgba(255,90,31,0.1);}
-  .hero-socials-row svg{width:18px; height:18px;}
+  .hero-welcome{
+    font-family:'IBM Plex Mono', monospace; font-size:1rem; letter-spacing:2px;
+    color:var(--mist); margin-bottom:8px; text-transform:uppercase;
+  }
+  .hero-title{
+    font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:800;
+    font-size:clamp(3rem, 7vw, 5.5rem); line-height:1.02; margin-bottom:22px;
+    color:var(--paper);
+  }
+  .hero-title span{color:var(--ember); display:block;}
+  .subtitle{font-size:1.02rem; color:var(--mist); line-height:1.9; margin-bottom:30px; max-width:480px; margin-left:auto;}
+  .hero-btns{display:flex; gap:14px; justify-content:flex-end;}
+  .hero-btn-primary{
+    background:var(--ember); color:#1a0a02; font-weight:800; font-size:.92rem;
+    padding:14px 30px; border-radius:8px; transition:transform .2s, box-shadow .2s;
+    box-shadow:0 8px 24px -8px rgba(255,90,31,0.6);
+  }
+  .hero-btn-primary:hover{transform:translateY(-2px);}
+  .hero-btn-outline{
+    border:1px solid var(--line); color:var(--paper); font-weight:700; font-size:.92rem;
+    padding:14px 30px; border-radius:8px; transition:all .2s;
+  }
+  .hero-btn-outline:hover{border-color:var(--ember); color:var(--ember);}
 
   /* about us section */
   .about-section{padding:100px 0;}
@@ -294,12 +308,11 @@
   @media (max-width:860px){
     .hero{min-height:80vh;}
     .hero-bg{background-position:center 25%; background-size:cover;}
-    .hero .wrap{position:static; padding:100px 28px 0;}
+    .hero .wrap{position:static; top:auto; transform:none; padding:130px 28px 40px;}
     .hero-content{text-align:center; margin:0 auto;}
-    .tag-pill{margin-left:auto; margin-right:auto;}
-    .hero-socials-row{justify-content:center;}
+    .hero-pill{margin-left:auto; margin-right:auto;}
+    .hero-btns{justify-content:center; flex-wrap:wrap;}
     .subtitle{margin:0 auto 24px;}
-    .brand-tagline{text-align:center;}
     .about-grid{grid-template-columns:1fr;}
     .about-eyebrow, .about-section h2{justify-content:center; text-align:center;}
     .community-grid{grid-template-columns:1fr;}
@@ -319,18 +332,18 @@
       <span class="logo-text">Dream Town</span>
     </a>
     <ul class="navlinks">
-      <li><a href="index.html" class="active">الرئيسية</a></li>
-      <li><a href="team.html">الفريق</a></li>
-      <li><a href="jobs.html">الوظائف</a></li>
-      <li><a href="leaderboard.html">المتصدرين</a></li>
+      <li><a href="index.html" class="active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="team.html" data-en="Team" data-ar="الفريق">Team</a></li>
+      <li><a href="jobs.html" data-en="Jobs" data-ar="الوظائف">Jobs</a></li>
+      <li><a href="leaderboard.html" data-en="Leaderboard" data-ar="المتصدرين">Leaderboard</a></li>
     </ul>
     <div class="navcta">
-      <a class="icon-btn" href="#" aria-label="اللغة">
+      <a class="icon-btn lang-toggle" href="#" aria-label="Language">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
       </a>
       <a href="#" class="btn btn-primary store-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        المتجر
+        <span data-en="Store" data-ar="المتجر">Store</span>
       </a>
     </div>
   </nav>
@@ -346,29 +359,29 @@
     <div class="wrap">
       <div class="hero-content">
 
-        <div class="tag-pill"><span class="dot"></span> رقم 1 كأفضل مجتمع RP في عالم السوني</div>
+        <div class="hero-pill">
+          <img src="https://files.catbox.moe/7yhvol.webp" alt="" referrerpolicy="no-referrer">
+          <span>DREAM TOWN</span>
+        </div>
 
-        <div class="brand-tagline"><b>D T</b><span class="sep">·</span>حيث تصبح الأحلام واقع</div>
+        <div class="hero-welcome" data-en="Welcome to" data-ar="مرحباً بكم في">Welcome to</div>
+        <h1 class="hero-title">Dream <span>Town</span></h1>
 
-        <p class="subtitle">أفضل تجربة حياة واقعية GTA V، انضم لأكثر من 2000 لاعب في عالم مليء بالأحداث والقصص التي لا تُنسى.</p>
+        <p class="subtitle" data-en="The best GTA V realistic life experience. Join over 2,000 players in a world full of unforgettable events and stories." data-ar="أفضل تجربة حياة واقعية GTA V، انضم لأكثر من 2000 لاعب في عالم مليء بالأحداث والقصص التي لا تُنسى.">The best GTA V realistic life experience. Join over 2,000 players in a world full of unforgettable events and stories.</p>
 
-        <div class="hero-socials-row">
-          <a href="https://discord.gg/dt-1" target="_blank" rel="noopener" aria-label="ديسكورد">
-            <svg viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21a105.73,105.73,0,0,0,32.17,16.15,77.7,77.7,0,0,0,6.89-11.11,68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14C129.24,52.24,122.9,28.61,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@dt_rp2?_r=1&_t=ZS-988Wy7lVufl" target="_blank" rel="noopener" aria-label="تيك توك">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
-          </a>
+        <div class="hero-btns">
+          <a href="https://discord.gg/dt-1" target="_blank" rel="noopener" class="hero-btn-primary" data-en="Get Started" data-ar="ابدأ الآن">Get Started</a>
+          <a href="#about-us" class="hero-btn-outline" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT US -->
-  <section class="about-section">
+  <section class="about-section" id="about-us">
     <div class="wrap">
-      <div class="about-eyebrow">لماذا نحن</div>
-      <h2>تعرف علينا</h2>
+      <div class="about-eyebrow" data-en="Why Us" data-ar="لماذا نحن">Why Us</div>
+      <h2 data-en="Get to Know Us" data-ar="تعرف علينا">Get to Know Us</h2>
 
       <div class="about-grid">
 
@@ -376,48 +389,48 @@
           <div class="about-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           </div>
-          <h3>وظائف مخصصة</h3>
-          <p>سواء كنت تطبق القانون أو تدير الأرواح أو تنفذ عملك، وظائفنا الفريدة تجعل لعب الأدوار حقيقيًا.</p>
+          <h3 data-en="Custom Jobs" data-ar="وظائف مخصصة">Custom Jobs</h3>
+          <p data-en="Whether you enforce the law, save lives, or run your own business, our unique jobs make roleplay feel real." data-ar="سواء كنت تطبق القانون أو تدير الأرواح أو تنفذ عملك، وظائفنا الفريدة تجعل لعب الأدوار حقيقيًا.">Whether you enforce the law, save lives, or run your own business, our unique jobs make roleplay feel real.</p>
         </div>
 
         <div class="about-card">
           <div class="about-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <h3>سكربتات متقدمة</h3>
-          <p>استمتع بتجربة لعب سلسة ومبتكرة مع سكربتاتنا المخصصة التي تعزز التفاعل والواقعية.</p>
+          <h3 data-en="Advanced Scripts" data-ar="سكربتات متقدمة">Advanced Scripts</h3>
+          <p data-en="Enjoy a smooth, innovative gameplay experience with our custom scripts that boost interaction and realism." data-ar="استمتع بتجربة لعب سلسة ومبتكرة مع سكربتاتنا المخصصة التي تعزز التفاعل والواقعية.">Enjoy a smooth, innovative gameplay experience with our custom scripts that boost interaction and realism.</p>
         </div>
 
         <div class="about-card">
           <div class="about-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
           </div>
-          <h3>أفضل دعم في المجال</h3>
-          <p>احصل على مساعدة فورية على مدار الساعة من فريقنا، مع استجابة خلال 90 ثانية.</p>
+          <h3 data-en="Best Support in the Field" data-ar="أفضل دعم في المجال">Best Support in the Field</h3>
+          <p data-en="Get instant help around the clock from our team, with an average response time under 90 seconds." data-ar="احصل على مساعدة فورية على مدار الساعة من فريقنا، مع استجابة خلال 90 ثانية.">Get instant help around the clock from our team, with an average response time under 90 seconds.</p>
         </div>
 
         <div class="about-card">
           <div class="about-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3>مجتمع نشط</h3>
-          <p>انضم لمجتمع من عشاق لعب الأدوار في فعاليات ومغامرات يديرها فريق متخصص.</p>
+          <h3 data-en="Active Community" data-ar="مجتمع نشط">Active Community</h3>
+          <p data-en="Join a community of roleplay lovers in events and adventures run by a dedicated team." data-ar="انضم لمجتمع من عشاق لعب الأدوار في فعاليات ومغامرات يديرها فريق متخصص.">Join a community of roleplay lovers in events and adventures run by a dedicated team.</p>
         </div>
 
         <div class="about-card">
           <div class="about-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 4v5c0 5-3.5 8.5-9 9-5.5-.5-9-4-9-9V7l9-4z"/></svg>
           </div>
-          <h3>صلاحيات الإدارة</h3>
-          <p>يطبق المشرفون قواعد المجتمع ويحاربون اللاعبين المخلين لضمان بيئة لعب عادلة.</p>
+          <h3 data-en="Admin Authority" data-ar="صلاحيات الإدارة">Admin Authority</h3>
+          <p data-en="Our staff enforce community rules and act against disruptive players to keep the game fair." data-ar="يطبق المشرفون قواعد المجتمع ويحاربون اللاعبين المخلين لضمان بيئة لعب عادلة.">Our staff enforce community rules and act against disruptive players to keep the game fair.</p>
         </div>
 
         <div class="about-card">
           <div class="about-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3>حقوق اللاعبين</h3>
-          <p>حقوقك ومعلوماتك محفوظة بشكل آمن، مما يضمن بيئة لعب آمنة للجميع.</p>
+          <h3 data-en="Player Rights" data-ar="حقوق اللاعبين">Player Rights</h3>
+          <p data-en="Your rights and data are securely protected, ensuring a safe playing environment for everyone." data-ar="حقوقك ومعلوماتك محفوظة بشكل آمن، مما يضمن بيئة لعب آمنة للجميع.">Your rights and data are securely protected, ensuring a safe playing environment for everyone.</p>
         </div>
 
       </div>
@@ -427,7 +440,7 @@
   <!-- COMMUNITY -->
   <section class="community-section">
     <div class="wrap">
-      <h2>المجتمع</h2>
+      <h2 data-en="Community" data-ar="المجتمع">Community</h2>
       <div class="community-grid">
 
         <div class="community-card">
@@ -435,7 +448,7 @@
             <svg viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21a105.73,105.73,0,0,0,32.17,16.15,77.7,77.7,0,0,0,6.89-11.11,68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14C129.24,52.24,122.9,28.61,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
           </div>
           <div class="community-num">2,341</div>
-          <div class="community-label">أعضاء ديسكورد</div>
+          <div class="community-label" data-en="Discord Members" data-ar="أعضاء ديسكورد">Discord Members</div>
         </div>
 
         <div class="community-card">
@@ -443,7 +456,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
           </div>
           <div class="community-num">24/7</div>
-          <div class="community-label">دعم فني</div>
+          <div class="community-label" data-en="Support" data-ar="دعم فني">Support</div>
         </div>
 
         <div class="community-card">
@@ -451,7 +464,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.6 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.5l7.1-.6L12 2z"/></svg>
           </div>
           <div class="community-num">+40</div>
-          <div class="community-label">ميزة</div>
+          <div class="community-label" data-en="Features" data-ar="ميزة">Features</div>
         </div>
 
       </div>
@@ -463,8 +476,8 @@
     <div class="wrap">
 
       <div class="events-head">
-        <h2>أحداث بلدة الأحلام</h2>
-        <p>أهم الأحداث و أكبرها في بلدة الأحلام</p>
+        <h2 data-en="Dream Town Events" data-ar="أحداث بلدة الأحلام">Dream Town Events</h2>
+        <p data-en="The biggest and most important events in Dream Town" data-ar="أهم الأحداث و أكبرها في بلدة الأحلام">The biggest and most important events in Dream Town</p>
       </div>
 
       <div class="filter-tabs">
@@ -473,7 +486,7 @@
         <button class="filter-tab" data-filter="racing">Racing</button>
         <button class="filter-tab" data-filter="rivalry">Rivalry</button>
         <button class="filter-tab" data-filter="war">War</button>
-        <button class="filter-tab active" data-filter="all">الكل</button>
+        <button class="filter-tab active" data-filter="all" data-en="All" data-ar="الكل">All</button>
       </div>
 
       <div class="events-grid" id="eventsGrid">
@@ -482,12 +495,12 @@
         <div class="event-card" data-category="war">
           <div class="event-media">
             <span class="event-badge">War</span>
-            <img src="https://files.catbox.moe/t46nv7.jpeg" alt="احتلال ساندي" referrerpolicy="no-referrer">
+            <img src="https://files.catbox.moe/t46nv7.jpeg" alt="Sandy Occupation" referrerpolicy="no-referrer">
           </div>
           <div class="event-body">
-            <div class="event-title">احتلال ساندي</div>
+            <div class="event-title" data-en="Sandy Occupation" data-ar="احتلال ساندي">Sandy Occupation</div>
             <span class="event-date">Jul 11, 2026</span>
-            <p class="event-desc">شهدت ساندي واحدة من أقوى المعارك في دريم تاون RP بعد محاولة العصابات احتلالها، لكن قوات العسكر تصدت لهم وتمكنت من استعادة المدينة بالكامل، لتنتهي المعركة بانتصار الدولة وعودة الأمن إلى ساندي.</p>
+            <p class="event-desc" data-en="Sandy witnessed one of the fiercest battles in Dream Town RP after gangs attempted to seize it, but military forces pushed them back and fully retook the city, ending the fight with a state victory and Sandy's safety restored." data-ar="شهدت ساندي واحدة من أقوى المعارك في دريم تاون RP بعد محاولة العصابات احتلالها، لكن قوات العسكر تصدت لهم وتمكنت من استعادة المدينة بالكامل، لتنتهي المعركة بانتصار الدولة وعودة الأمن إلى ساندي.">Sandy witnessed one of the fiercest battles in Dream Town RP after gangs attempted to seize it, but military forces pushed them back and fully retook the city, ending the fight with a state victory and Sandy's safety restored.</p>
           </div>
         </div>
 
@@ -500,7 +513,7 @@
           <div class="event-body">
             <div class="event-title">Truck Event</div>
             <span class="event-date">Aug 4, 2026</span>
-            <p class="event-desc">بعد مواجهة قوية بين الشرطة والعصابات حول الشاحنة المحمية، تمكنت العصابات من السيطرة على الشحنة والنجاح في الهروب بها، لتنتهي المواجهة بانتصار العصابات.</p>
+            <p class="event-desc" data-en="After a fierce standoff between police and gangs over the protected truck, the gangs managed to seize the shipment and successfully escape, ending the confrontation with a gang victory." data-ar="بعد مواجهة قوية بين الشرطة والعصابات حول الشاحنة المحمية، تمكنت العصابات من السيطرة على الشحنة والنجاح في الهروب بها، لتنتهي المواجهة بانتصار العصابات.">After a fierce standoff between police and gangs over the protected truck, the gangs managed to seize the shipment and successfully escape, ending the confrontation with a gang victory.</p>
           </div>
         </div>
 
@@ -519,8 +532,8 @@
   <section class="faq-section">
     <div class="wrap">
       <div class="faq-head">
-        <div class="faq-eyebrow">الأسئلة الشائعة</div>
-        <h2>الأسئلة الشائعة</h2>
+        <div class="faq-eyebrow" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</div>
+        <h2 data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة">Frequently Asked Questions</h2>
       </div>
 
       <div class="faq-list" id="faqList">
@@ -528,40 +541,40 @@
         <div class="faq-item open">
           <div class="faq-question">
             <span class="faq-toggle">+</span>
-            <h3>ما هو Dream Town RP؟</h3>
+            <h3 data-en="What is Dream Town RP?" data-ar="ما هو Dream Town RP؟">What is Dream Town RP?</h3>
           </div>
           <div class="faq-answer">
-            <p>Dream Town RP هو سيرفر رول بلاي على سوني يقدم تجربة واقعية، أنظمة مميزة، وإدارة عادلة في بيئة ممتعة للجميع.</p>
+            <p data-en="Dream Town RP is a PS roleplay server offering a realistic experience, distinctive systems, and fair management in an enjoyable environment for everyone." data-ar="Dream Town RP هو سيرفر رول بلاي على سوني يقدم تجربة واقعية، أنظمة مميزة، وإدارة عادلة في بيئة ممتعة للجميع.">Dream Town RP is a PS roleplay server offering a realistic experience, distinctive systems, and fair management in an enjoyable environment for everyone.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
             <span class="faq-toggle">+</span>
-            <h3>كيف أحصل على القائمة البيضاء؟</h3>
+            <h3 data-en="How do I get whitelisted?" data-ar="كيف أحصل على القائمة البيضاء؟">How do I get whitelisted?</h3>
           </div>
           <div class="faq-answer">
-            <p>تدخل السيرفر من علامة الديسكورد في الأعلى، ثم تذهب إلى روم ID، ثم تكتب الآيدي الخاص بك في السوني. سيراجع فريقنا طلبك ويمنحك الوصول بعد الموافقة.</p>
+            <p data-en="Join the server from the Discord icon above, go to the Room ID channel, and post your PS ID. Our team will review your request and grant access once approved." data-ar="تدخل السيرفر من علامة الديسكورد في الأعلى، ثم تذهب إلى روم ID، ثم تكتب الآيدي الخاص بك في السوني. سيراجع فريقنا طلبك ويمنحك الوصول بعد الموافقة.">Join the server from the Discord icon above, go to the Room ID channel, and post your PS ID. Our team will review your request and grant access once approved.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
             <span class="faq-toggle">+</span>
-            <h3>ما الألعاب المدعومة؟</h3>
+            <h3 data-en="Which games are supported?" data-ar="ما الألعاب المدعومة؟">Which games are supported?</h3>
           </div>
           <div class="faq-answer">
-            <p>ندعم حاليًا GTA V (النسخة المحسنة).</p>
+            <p data-en="We currently support GTA V (Enhanced Edition)." data-ar="ندعم حاليًا GTA V (النسخة المحسنة).">We currently support GTA V (Enhanced Edition).</p>
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
             <span class="faq-toggle">+</span>
-            <h3>كيف أتواصل مع الدعم؟</h3>
+            <h3 data-en="How do I contact support?" data-ar="كيف أتواصل مع الدعم؟">How do I contact support?</h3>
           </div>
           <div class="faq-answer">
-            <p>أسرع طريقة للوصول إلينا هي عبر سيرفر Discord. فريق الدعم متاح على مدار الساعة ويستجيب عادة خلال 90 ثانية.</p>
+            <p data-en="The fastest way to reach us is through our Discord server. Our support team is available around the clock and usually responds within 90 seconds." data-ar="أسرع طريقة للوصول إلينا هي عبر سيرفر Discord. فريق الدعم متاح على مدار الساعة ويستجيب عادة خلال 90 ثانية.">The fastest way to reach us is through our Discord server. Our support team is available around the clock and usually responds within 90 seconds.</p>
           </div>
         </div>
 
@@ -575,18 +588,18 @@
       <div class="stay-grid">
 
         <div class="stay-icons">
-          <a href="https://discord.gg/dt-1" target="_blank" rel="noopener" aria-label="ديسكورد">
+          <a href="https://discord.gg/dt-1" target="_blank" rel="noopener" aria-label="Discord">
             <svg viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21a105.73,105.73,0,0,0,32.17,16.15,77.7,77.7,0,0,0,6.89-11.11,68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14C129.24,52.24,122.9,28.61,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
           </a>
-          <a href="https://www.tiktok.com/@dt_rp2?_r=1&_t=ZS-988Wy7lVufl" target="_blank" rel="noopener" aria-label="تيك توك">
+          <a href="https://www.tiktok.com/@dt_rp2?_r=1&_t=ZS-988Wy7lVufl" target="_blank" rel="noopener" aria-label="TikTok">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
           </a>
         </div>
 
         <div class="stay-text">
-          <div class="stay-eyebrow">ابقَ على تواصل</div>
-          <h2>ابقَ على اطلاع</h2>
-          <p>لديك أسئلة أو ملاحظات؟ يسعدنا سماعك. تواصل مع فريقنا أو انضم إلى <a href="https://discord.gg/dt-1" target="_blank" rel="noopener">مجتمع Discord</a>.</p>
+          <div class="stay-eyebrow" data-en="Stay in Touch" data-ar="ابقَ على تواصل">Stay in Touch</div>
+          <h2 data-en="Stay Updated" data-ar="ابقَ على اطلاع">Stay Updated</h2>
+          <p data-en-html='Have questions or feedback? We would love to hear from you. Reach out to our team or join our <a href="https://discord.gg/dt-1" target="_blank" rel="noopener">Discord community</a>.' data-ar-html='لديك أسئلة أو ملاحظات؟ يسعدنا سماعك. تواصل مع فريقنا أو انضم إلى <a href="https://discord.gg/dt-1" target="_blank" rel="noopener">مجتمع Discord</a>.'>Have questions or feedback? We would love to hear from you. Reach out to our team or join our <a href="https://discord.gg/dt-1" target="_blank" rel="noopener">Discord community</a>.</p>
         </div>
 
       </div>
@@ -600,7 +613,7 @@
     <div class="footer-top">
       <a href="index.html" class="logo-img"><img src="https://files.catbox.moe/zom6x4.webp" alt=""></a>
     </div>
-    <div class="footer-bottom">© 2026 Dream Town. جميع الحقوق محفوظة | تم الإنشاء بواسطة <a href="https://discord.com/users/1443335432036155532" target="_blank" rel="noopener" style="color:var(--ember); font-weight:700;">Kyro</a></div>
+    <div class="footer-bottom" data-en-html='© 2026 Dream Town. All rights reserved. | Built by <a href="https://discord.com/users/1443335432036155532" target="_blank" rel="noopener" style="color:var(--ember); font-weight:700;">Kyro</a>' data-ar-html='© 2026 Dream Town. جميع الحقوق محفوظة | تم الإنشاء بواسطة <a href="https://discord.com/users/1443335432036155532" target="_blank" rel="noopener" style="color:var(--ember); font-weight:700;">Kyro</a>'>© 2026 Dream Town. All rights reserved. | Built by <a href="https://discord.com/users/1443335432036155532" target="_blank" rel="noopener" style="color:var(--ember); font-weight:700;">Kyro</a></div>
   </div>
 </footer>
 
