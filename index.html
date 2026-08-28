@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-title-en="Dream Town | RP Server" data-title-ar="Dream Town | دريم تاون">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +38,7 @@
   .icon-btn{
     width:34px; height:34px; border-radius:50%; border:1px solid #555;
     display:flex; align-items:center; justify-content:center; color:#ccc;
-    background:#3a3a3a; flex-shrink:0;
+    background:#3a3a3a; flex-shrink:0; cursor:pointer;
   }
   .icon-btn svg{width:18px; height:18px;}
   .store-btn{white-space:nowrap; flex-shrink:0;}
@@ -63,6 +63,7 @@
     max-width:620px;
     text-align:right; margin-left:auto;
   }
+  html[dir="ltr"] .hero-content{text-align:left; margin-left:0; margin-right:auto;}
   .hero-pill{
     display:inline-flex; align-items:center; gap:8px;
     background:rgba(23,18,16,0.7); border:1px solid var(--line); border-radius:999px;
@@ -84,7 +85,9 @@
   }
   .hero-title span{color:var(--ember); display:block;}
   .subtitle{font-size:1.02rem; color:var(--mist); line-height:1.9; margin-bottom:30px; max-width:480px; margin-left:auto;}
+  html[dir="ltr"] .subtitle{margin-left:0; margin-right:auto;}
   .hero-btns{display:flex; gap:14px; justify-content:flex-end;}
+  html[dir="ltr"] .hero-btns{justify-content:flex-start;}
   .hero-btn-primary{
     background:var(--ember); color:#1a0a02; font-weight:800; font-size:.92rem;
     padding:14px 30px; border-radius:8px; transition:transform .2s, box-shadow .2s;
@@ -104,6 +107,7 @@
     color:var(--ember); font-family:'IBM Plex Mono', monospace; font-size:.85rem;
     margin-bottom:14px;
   }
+  html[dir="ltr"] .about-eyebrow{justify-content:flex-start;}
   .about-eyebrow::before{
     content:''; width:24px; height:1px; background:var(--ember);
   }
@@ -111,6 +115,7 @@
     font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:700;
     font-size:clamp(2rem, 4vw, 2.6rem); text-align:right; margin-bottom:50px;
   }
+  html[dir="ltr"] .about-section h2{text-align:left;}
   .about-grid{
     display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;
   }
@@ -118,6 +123,7 @@
     background:var(--deep); border:1px solid var(--line); border-radius:16px;
     padding:28px; text-align:right; transition:transform .25s, border-color .25s;
   }
+  html[dir="ltr"] .about-card{text-align:left;}
   .about-card:hover{transform:translateY(-6px); border-color:var(--ember);}
   .about-icon{
     width:44px; height:44px; border-radius:12px;
@@ -125,6 +131,7 @@
     display:flex; align-items:center; justify-content:center;
     margin-bottom:18px; margin-right:auto;
   }
+  html[dir="ltr"] .about-icon{margin-right:0; margin-left:auto;}
   .about-icon svg{width:22px; height:22px;}
   .about-card h3{font-size:1.05rem; font-weight:700; margin-bottom:10px;}
   .about-card p{color:var(--mist); font-size:.87rem; line-height:1.8;}
@@ -207,6 +214,7 @@
     background:var(--ember); color:#fff; font-size:.7rem; font-weight:700;
     padding:4px 10px; border-radius:6px; text-transform:uppercase;
   }
+  html[dir="ltr"] .event-badge{right:auto; left:10px;}
   .event-body{padding:16px 16px 18px;}
   .event-title{font-size:.98rem; font-weight:700; margin-bottom:6px; line-height:1.5;}
   .event-date{
@@ -284,11 +292,13 @@
   .stay-icons a:hover{border-color:var(--ember); color:var(--ember); background:rgba(255,90,31,0.08);}
   .stay-icons svg{width:24px; height:24px;}
   .stay-text{text-align:right; max-width:480px;}
+  html[dir="ltr"] .stay-text{text-align:left;}
   .stay-eyebrow{
     display:flex; align-items:center; gap:10px; justify-content:flex-end;
     color:var(--ember); font-family:'IBM Plex Mono', monospace; font-size:.85rem;
     margin-bottom:14px;
   }
+  html[dir="ltr"] .stay-eyebrow{justify-content:flex-start;}
   .stay-eyebrow::before{content:''; width:24px; height:1px; background:var(--ember);}
   .stay-text h2{
     font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:700;
@@ -338,9 +348,9 @@
       <li><a href="leaderboard.html" data-en="Leaderboard" data-ar="المتصدرين">Leaderboard</a></li>
     </ul>
     <div class="navcta">
-      <a class="icon-btn lang-toggle" href="#" aria-label="Language">
+      <button type="button" class="icon-btn lang-toggle" aria-label="Language">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
-      </a>
+      </button>
       <a href="#" class="btn btn-primary store-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <span data-en="Store" data-ar="المتجر">Store</span>
@@ -481,11 +491,11 @@
       </div>
 
       <div class="filter-tabs">
-        <button class="filter-tab" data-filter="event">Event</button>
-        <button class="filter-tab" data-filter="heist">Heist</button>
-        <button class="filter-tab" data-filter="racing">Racing</button>
-        <button class="filter-tab" data-filter="rivalry">Rivalry</button>
-        <button class="filter-tab" data-filter="war">War</button>
+        <button class="filter-tab" data-filter="event" data-en="Event" data-ar="حدث">Event</button>
+        <button class="filter-tab" data-filter="heist" data-en="Heist" data-ar="سرقة">Heist</button>
+        <button class="filter-tab" data-filter="racing" data-en="Racing" data-ar="سباق">Racing</button>
+        <button class="filter-tab" data-filter="rivalry" data-en="Rivalry" data-ar="عداوة">Rivalry</button>
+        <button class="filter-tab" data-filter="war" data-en="War" data-ar="حرب">War</button>
         <button class="filter-tab active" data-filter="all" data-en="All" data-ar="الكل">All</button>
       </div>
 
@@ -494,7 +504,7 @@
         <!-- حدث: احتلال ساندي -->
         <div class="event-card" data-category="war">
           <div class="event-media">
-            <span class="event-badge">War</span>
+            <span class="event-badge" data-en="War" data-ar="حرب">War</span>
             <img src="https://files.catbox.moe/t46nv7.jpeg" alt="Sandy Occupation" referrerpolicy="no-referrer">
           </div>
           <div class="event-body">
@@ -507,7 +517,7 @@
         <!-- حدث: Truck Event -->
         <div class="event-card" data-category="event">
           <div class="event-media">
-            <span class="event-badge">Event</span>
+            <span class="event-badge" data-en="Event" data-ar="حدث">Event</span>
             <img src="https://files.catbox.moe/4ipo7n.jpeg" alt="Truck Event" referrerpolicy="no-referrer">
           </div>
           <div class="event-body">
@@ -621,36 +631,29 @@
   const skyline = document.getElementById('skyline');
   for(let i=0;i<40;i++){
     const bar = document.createElement('i');
-    bar.style.height = (30 + Math.random()*160) + 'px';
+    bar.style.height = (30 + Math.random()*190) + 'px';
     skyline.appendChild(bar);
   }
 
-  // فلترة الأحداث حسب الفئة
-  const filterTabs = document.querySelectorAll('.filter-tab');
-  const eventCards = document.querySelectorAll('#eventsGrid .event-card');
-
-  filterTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      filterTabs.forEach(t => t.classList.remove('active'));
+  // events filter tabs
+  const tabs = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('.event-card');
+  tabs.forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      tabs.forEach(t=>t.classList.remove('active'));
       tab.classList.add('active');
       const filter = tab.dataset.filter;
-
-      eventCards.forEach(card => {
-        if(filter === 'all' || card.dataset.category === filter){
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
+      cards.forEach(card=>{
+        card.style.display = (filter==='all' || card.dataset.category===filter) ? '' : 'none';
       });
     });
   });
 
-  // أكورديون الأسئلة الشائعة
-  const faqItems = document.querySelectorAll('#faqList .faq-item');
-  faqItems.forEach(item => {
-    item.querySelector('.faq-question').addEventListener('click', () => {
+  // faq accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-question').addEventListener('click', ()=>{
       const isOpen = item.classList.contains('open');
-      faqItems.forEach(i => i.classList.remove('open'));
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
       if(!isOpen) item.classList.add('open');
     });
   });
