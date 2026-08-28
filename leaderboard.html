@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المتصدرين | Dream Town</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .logo-img{display:flex; align-items:center; gap:10px;}
+  .logo-img img{height:38px; width:auto; display:block;}
+  .logo-text{
+    font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:800;
+    font-size:1.15rem; color:var(--paper); letter-spacing:.3px; white-space:nowrap;
+  }
+  .navcta{display:flex; gap:8px; align-items:center; flex-shrink:0;}
+  .icon-btn{
+    width:34px; height:34px; border-radius:50%; border:1px solid #555;
+    display:flex; align-items:center; justify-content:center; color:#ccc;
+    background:#3a3a3a; flex-shrink:0;
+  }
+  .icon-btn svg{width:18px; height:18px;}
+  .store-btn{white-space:nowrap; flex-shrink:0;}
+  .store-btn svg{width:16px; height:16px;}
+
+  /* leaderboard hero */
+  .lb-hero{
+    padding:110px 0 30px; text-align:center;
+    background:radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255,90,31,0.14), transparent 70%);
+  }
+  .lb-hero h1{
+    font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:800;
+    font-size:clamp(2rem, 4.5vw, 2.8rem); margin-bottom:10px;
+    display:flex; align-items:center; justify-content:center; gap:12px;
+  }
+  .lb-hero p{color:var(--mist); font-size:.98rem;}
+
+  .lb-meta{
+    display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap;
+    margin-top:22px;
+  }
+  .lb-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--deep); border:1px solid var(--line); border-radius:999px;
+    padding:7px 16px; font-size:.8rem; color:var(--mist);
+  }
+  .lb-pill.live{color:#5bd67a; border-color:rgba(91,214,122,.35);}
+  .lb-pill.season{color:var(--gold); border-color:rgba(255,179,71,.35); font-weight:700;}
+
+  .lb-countdown{
+    display:inline-flex; align-items:center; gap:8px;
+    margin-top:16px; padding:10px 20px; border-radius:999px;
+    background:rgba(255,90,31,0.08); border:1px solid rgba(255,90,31,0.3);
+    color:var(--ember); font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:.9rem;
+  }
+
+  .lb-month{
+    margin-top:22px; display:flex; flex-direction:column; align-items:center; gap:6px;
+  }
+  .lb-month select{
+    background:var(--deep); border:1px solid var(--line); color:var(--paper);
+    border-radius:10px; padding:9px 16px; font-family:'Tajawal',sans-serif; font-size:.88rem;
+  }
+  .lb-range{color:var(--mist); font-size:.8rem; font-family:'IBM Plex Mono', monospace;}
+
+  /* body layout */
+  .lb-section{padding:50px 0 100px;}
+  .lb-layout{display:grid; grid-template-columns:280px 1fr; gap:26px; align-items:start;}
+
+  .lb-rewards{
+    background:var(--deep); border:1px solid var(--line); border-radius:16px; padding:20px;
+  }
+  .lb-rewards h3{
+    font-family:'Baloo Bhaijaan 2', sans-serif; font-size:1rem; margin-bottom:16px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .lb-reward-card{
+    border:1px solid var(--line); border-radius:12px; padding:14px; margin-bottom:12px;
+    background:var(--panel);
+  }
+  .lb-reward-card.gold{border-color:rgba(255,179,71,.4); background:linear-gradient(135deg, rgba(255,179,71,.08), transparent);}
+  .lb-reward-card .rank-label{
+    display:flex; align-items:center; gap:6px; font-weight:700; font-size:.9rem;
+    color:var(--paper); margin-bottom:8px;
+  }
+  .lb-reward-card .rank-num{color:var(--ember); font-family:'IBM Plex Mono', monospace; font-size:.75rem;}
+  .lb-reward-card ul{list-style:none; display:flex; flex-direction:column; gap:4px;}
+  .lb-reward-card li{color:var(--mist); font-size:.8rem;}
+
+  .lb-list{display:flex; flex-direction:column; gap:10px;}
+  .lb-row{
+    display:flex; align-items:center; justify-content:space-between;
+    background:var(--deep); border:1px solid var(--line); border-radius:12px;
+    padding:14px 18px;
+  }
+  .lb-row.top1{background:rgba(255,179,71,.1); border-color:rgba(255,179,71,.4);}
+  .lb-row.top2{background:rgba(200,200,200,.06); border-color:rgba(200,200,200,.3);}
+  .lb-row.top3{background:rgba(205,127,50,.08); border-color:rgba(205,127,50,.35);}
+  .lb-hours{
+    font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:.95rem; color:var(--gold);
+  }
+  .lb-row.top2 .lb-hours{color:#cfcfcf;}
+  .lb-row.top3 .lb-hours{color:#cd7f32;}
+  .lb-name-wrap{display:flex; align-items:center; gap:10px;}
+  .lb-name{color:var(--paper); font-weight:700; font-size:.95rem;}
+  .lb-rank-badge{
+    min-width:26px; text-align:center; font-size:.78rem; color:var(--mist);
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  @media (max-width:860px){
+    .lb-layout{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-img">
+      <img src="https://files.catbox.moe/7yhvol.webp" alt="Dream Town" referrerpolicy="no-referrer">
+      <span class="logo-text">Dream Town</span>
+    </a>
+    <ul class="navlinks">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="team.html">الفريق</a></li>
+      <li><a href="jobs.html">الوظائف</a></li>
+      <li><a href="leaderboard.html" class="active">المتصدرين</a></li>
+    </ul>
+    <div class="navcta">
+      <a class="icon-btn" href="#" aria-label="اللغة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+      </a>
+      <a href="#" class="btn btn-primary store-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        المتجر
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="lb-hero">
+    <div class="wrap">
+      <h1>🏆 المتصدرين 🏆</h1>
+      <p>أفضل 50 لاعب حسب وقت اللعب على DT RP Season 1</p>
+
+      <div class="lb-meta">
+        <span class="lb-pill live">🔄 التحديث القادم: 03:00 م</span>
+        <span class="lb-pill">📅 مسابقة شهرية</span>
+        <span class="lb-pill season">🏁 DT RP Season 1</span>
+      </div>
+
+      <div class="lb-countdown">
+        🕐 <span id="countdown">--</span> ينتهي في
+      </div>
+
+      <div class="lb-month">
+        <select id="monthSelect">
+          <option>August 2026 (الحالية)</option>
+        </select>
+        <span class="lb-range">Aug 1 — Aug 31, 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lb-section">
+    <div class="wrap">
+      <div class="lb-layout">
+
+        <!-- REWARDS SIDEBAR -->
+        <div class="lb-rewards">
+          <h3>🎁 مستويات المكافآت</h3>
+
+          <div class="lb-reward-card gold">
+            <div class="rank-label">👑 TOP 1 <span class="rank-num">#1</span></div>
+            <ul>
+              <li>⚡ أولوية دخول 72 ساعة</li>
+              <li>🛍️ خصم 30% بالمتجر</li>
+            </ul>
+          </div>
+
+          <div class="lb-reward-card">
+            <div class="rank-label">⭐ TOP 2 <span class="rank-num">#2</span></div>
+            <ul>
+              <li>⚡ أولوية دخول 48 ساعة</li>
+              <li>🛍️ خصم 20% بالمتجر</li>
+            </ul>
+          </div>
+
+          <div class="lb-reward-card">
+            <div class="rank-label">⭐ TOP 3 <span class="rank-num">#3</span></div>
+            <ul>
+              <li>⚡ أولوية دخول 24 ساعة</li>
+              <li>🛍️ خصم 10% بالمتجر</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- LEADERBOARD LIST -->
+        <div class="lb-list" id="lbList">
+          <div style="color:var(--mist); text-align:center; padding:20px;">جارِ التحميل...</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="index.html" class="logo-img"><img src="https://files.catbox.moe/fc1899.png" alt="" referrerpolicy="no-referrer"></a>
+    </div>
+    <div class="footer-bottom">© 2026 Dream Town. جميع الحقوق محفوظة | تم الإنشاء بواسطة <a href="https://discord.com/users/1443335432036155532" target="_blank" rel="noopener" style="color:var(--ember); font-weight:700;">Kyro</a></div>
+  </div>
+</footer>
+
+<script>
+  // season end date - adjust as needed
+  const seasonEnd = new Date('2026-09-01T00:00:00');
+
+  function updateCountdown(){
+    const now = new Date();
+    let diff = seasonEnd - now;
+    if(diff < 0) diff = 0;
+
+    const d = Math.floor(diff / (1000*60*60*24));
+    const h = Math.floor((diff / (1000*60*60)) % 24);
+    const m = Math.floor((diff / (1000*60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
+
+    document.getElementById('countdown').textContent = `${d}d ${h}h ${m}m ${s}s`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  const medal = ['👑', '🥈', '🥉'];
+  const rowClass = ['top1', 'top2', 'top3'];
+
+  function formatHours(decimalHours){
+    const h = Math.floor(decimalHours);
+    const m = Math.round((decimalHours - h) * 60);
+    return `${h}h ${m}m`;
+  }
+
+  fetch('leaderboard.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const list = document.getElementById('lbList');
+      list.innerHTML = '';
+
+      data.players.forEach((p, i) => {
+        const row = document.createElement('div');
+        row.className = 'lb-row' + (rowClass[i] ? ' ' + rowClass[i] : '');
+        row.innerHTML = `
+          <div class="lb-rank-badge">${medal[i] || '#' + (i + 1)}</div>
+          <div class="lb-name-wrap"><span class="lb-name">${p.name}</span></div>
+          <span class="lb-hours">${formatHours(p.hours)}</span>
+        `;
+        list.appendChild(row);
+      });
+    })
+    .catch(() => {
+      document.getElementById('lbList').innerHTML =
+        '<div style="color:var(--mist); text-align:center; padding:20px;">تعذر تحميل البيانات حالياً</div>';
+    });
+</script>
+
+</body>
+</html>
