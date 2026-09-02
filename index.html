@@ -55,15 +55,31 @@
   <main>
 
     <section id="home" class="hero">
-      <div class="hero-inner reveal">
-        <span class="status-badge" data-i18n="hero.status"></span>
-        <p class="hero-role" data-i18n="hero.role"></p>
-        <h1 class="hero-name">Idom</h1>
-        <p class="hero-tagline" data-i18n="hero.tagline"></p>
-        <p class="hero-bio" data-i18n="hero.bio"></p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects"></a>
-          <a href="#contact" class="btn btn-outline" data-i18n="hero.contactMe"></a>
+      <div class="hero-grid">
+        <div class="hero-inner reveal">
+          <span class="status-badge" data-i18n="hero.status"></span>
+          <p class="hero-role" data-i18n="hero.role"></p>
+          <h1 class="hero-name">Idom</h1>
+          <span class="hero-rule" aria-hidden="true"></span>
+          <p class="hero-tagline" data-i18n="hero.tagline"></p>
+          <p class="hero-bio" data-i18n="hero.bio"></p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects"></a>
+            <a href="#contact" class="btn btn-outline" data-i18n="hero.contactMe"></a>
+          </div>
+        </div>
+
+        <div class="hero-code reveal" aria-hidden="true">
+          <div class="code-window">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <pre class="code-body"><code><span class="tok-kw">const</span> developer = {
+  name: <span class="tok-str">"Faisal"</span>,
+  alias: <span class="tok-str">"Idom"</span>,
+  role: <span class="tok-str">"Software Developer"</span>,
+  stack: [<span class="tok-str">"JavaScript"</span>, <span class="tok-str">"Node.js"</span>, <span class="tok-str">"Lua"</span>, <span class="tok-str">"CSS"</span>],
+  status: <span class="tok-str">"available"</span>
+};</code></pre>
+          </div>
         </div>
       </div>
     </section>
@@ -72,7 +88,10 @@
       <div class="section-inner reveal">
         <h2 class="section-title" data-i18n="about.title"></h2>
         <div class="about-content">
-          <img class="about-avatar" src="https://files.catbox.moe/mlx3eq.jpeg" alt="Faisal, Idom" />
+          <div class="about-avatar-wrap">
+            <img class="about-avatar" src="https://files.catbox.moe/mlx3eq.jpeg" alt="Faisal, Idom" />
+            <span class="about-status-dot" aria-hidden="true"></span>
+          </div>
           <p class="about-text" data-i18n="about.text"></p>
         </div>
       </div>
@@ -130,6 +149,9 @@
       <div class="section-inner reveal">
         <h2 class="section-title" data-i18n="projects.title"></h2>
         <div class="soon-card" id="projectsList">
+          <span class="soon-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2.5 3.5"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+          </span>
           <span class="soon-tag" data-i18n="projects.soon"></span>
           <p data-i18n="projects.comingSoon"></p>
         </div>
@@ -140,6 +162,9 @@
       <div class="section-inner reveal">
         <h2 class="section-title" data-i18n="systems.title"></h2>
         <div class="soon-card" id="systemsList">
+          <span class="soon-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2.5 3.5"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+          </span>
           <span class="soon-tag" data-i18n="systems.soon"></span>
           <p data-i18n="systems.comingSoon"></p>
         </div>
@@ -201,16 +226,21 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <div class="views-counter" id="viewsCounter">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
-        </svg>
-        <span id="viewsCount">—</span>
-        <span data-i18n="views"></span>
+      <div class="footer-divider" aria-hidden="true"></div>
+      <div class="footer-row">
+        <div class="footer-left">
+          <p class="footer-copy">© 2026 Faisal “Idom”. All Rights Reserved.</p>
+          <p class="footer-credit" data-i18n="footer.designed"></p>
+        </div>
+        <div class="views-counter" id="viewsCounter">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          <span id="viewsCount">—</span>
+          <span data-i18n="views"></span>
+        </div>
       </div>
-      <p class="footer-copy">© 2026 Faisal “Idom”. All Rights Reserved.</p>
-      <p class="footer-credit" data-i18n="footer.designed"></p>
     </div>
   </footer>
 
