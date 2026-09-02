@@ -1,0 +1,40 @@
+{
+  "nav": { "home": "Start", "about": "Über mich", "skills": "Fähigkeiten", "projects": "Projekte", "systems": "Systeme", "contact": "Kontakt" },
+  "hero": {
+    "status": "Verfügbar für Projekte",
+    "role": "Software Developer",
+    "tagline": "Ich entwickle Discord-Bots, Webseiten & RP-Systeme.",
+    "bio": "Ich bin Faisal, auch bekannt als Idom. Ich bin ein autodidaktischer Entwickler mit Fokus auf Discord-Bots, Webseiten und individuelle RP-Systeme.",
+    "viewProjects": "Projekte ansehen",
+    "contactMe": "Kontaktiere mich"
+  },
+  "about": {
+    "title": "Über mich",
+    "text": "Faisal, bekannt als Idom, ist ein autodidaktischer Entwickler mit Fokus auf Discord-Entwicklung, Webentwicklung, RP-Systeme und individuelle Systeme."
+  },
+  "skills": { "title": "Fähigkeiten" },
+  "build": {
+    "title": "Was ich entwickle",
+    "discord": { "title": "Discord-Entwicklung", "desc": "Individuelle Discord-Bots, Verwaltungs-, Moderations-, Ticket- und Automatisierungssysteme für Server." },
+    "rp": { "title": "RP-Entwicklung", "desc": "Individuelle Roleplay-Systeme und Gameplay-Mechaniken." },
+    "web": { "title": "Webentwicklung", "desc": "Moderne, professionelle Webseiten und Oberflächen." },
+    "custom": { "title": "Individuelle Systeme", "desc": "Maßgeschneiderte Systeme nach den Anforderungen eines Projekts." }
+  },
+  "projects": { "title": "Projekte", "soon": "BALD", "comingSoon": "Weitere Projekte folgen in Kürze." },
+  "systems": { "title": "RP-Systeme", "soon": "BALD", "comingSoon": "Individuelle RP-Systeme folgen in Kürze." },
+  "experience": {
+    "title": "Erfahrung",
+    "selfTaught": { "title": "Autodidaktischer Entwickler", "desc": "Kontinuierliches Lernen und Wachsen durch persönliche Projekte und praktische Entwicklung." },
+    "discordDev": { "title": "Discord-Entwicklung", "desc": "Entwicklung von Discord-Bots und individuellen Serversystemen." },
+    "rpDev": { "title": "RP-Entwicklung", "desc": "Entwicklung von RP-Systemen und individuellen Spielerlebnissen." },
+    "current": { "title": "Aktuell", "desc": "Arbeit an Bots, Webseiten und individuellen Systemen." }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "discordLabel": "Discord",
+    "emailLabel": "E-Mail",
+    "note": "Andere Konten sind privat und nur für den persönlichen Gebrauch bestimmt. Für berufliche oder projektbezogene Anfragen kontaktiere mich bitte über Discord oder E-Mail."
+  },
+  "views": "Aufrufe",
+  "footer": { "designed": "Entworfen & entwickelt von Idom" }
+}
