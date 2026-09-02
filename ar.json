@@ -1,0 +1,40 @@
+{
+  "nav": { "home": "الرئيسية", "about": "نبذة", "skills": "المهارات", "projects": "المشاريع", "systems": "الأنظمة", "contact": "تواصل" },
+  "hero": {
+    "status": "متاح لاستقبال مشاريع",
+    "role": "Software Developer",
+    "tagline": "أبني بوتات Discord، مواقع، وأنظمة RP.",
+    "bio": "أنا فيصل، المعروف باسم Idom. مطور تعلّم بشكل ذاتي وأركز على بناء بوتات Discord، المواقع، وأنظمة RP المخصصة.",
+    "viewProjects": "عرض المشاريع",
+    "contactMe": "تواصل معي"
+  },
+  "about": {
+    "title": "نبذة عني",
+    "text": "فيصل، المعروف باسم Idom، مطور تعلّم بشكل ذاتي ويركز على تطوير بوتات Discord، تطوير المواقع، أنظمة الـ RP، والأنظمة المخصصة."
+  },
+  "skills": { "title": "المهارات" },
+  "build": {
+    "title": "ماذا أطوّر",
+    "discord": { "title": "Discord Development", "desc": "تطوير بوتات Discord مخصصة، أنظمة إدارة ومراقبة وتذاكر وأتمتة خاصة بالسيرفرات." },
+    "rp": { "title": "RP Development", "desc": "تطوير أنظمة Roleplay مخصصة وأنظمة مرتبطة بتجربة اللعب." },
+    "web": { "title": "Web Development", "desc": "تطوير مواقع وواجهات حديثة واحترافية." },
+    "custom": { "title": "Custom Systems", "desc": "تطوير أنظمة مخصصة حسب احتياجات المشروع." }
+  },
+  "projects": { "title": "المشاريع", "soon": "قريبًا", "comingSoon": "مشاريع جديدة قادمة قريبًا." },
+  "systems": { "title": "RP Systems", "soon": "قريبًا", "comingSoon": "أنظمة RP مخصصة قادمة قريبًا." },
+  "experience": {
+    "title": "المسيرة",
+    "selfTaught": { "title": "مطور ذاتي التعلّم", "desc": "التعلم والتطور المستمر من خلال المشاريع الشخصية والتطبيق العملي." },
+    "discordDev": { "title": "Discord Development", "desc": "تطوير بوتات Discord وأنظمة مخصصة للسيرفرات." },
+    "rpDev": { "title": "RP Development", "desc": "تطوير أنظمة RP وأنظمة مخصصة لتجارب اللعب." },
+    "current": { "title": "حاليًا", "desc": "العمل على البوتات، المواقع، والأنظمة المخصصة." }
+  },
+  "contact": {
+    "title": "تواصل",
+    "discordLabel": "Discord",
+    "emailLabel": "Email",
+    "note": "الحسابات الأخرى خاصة ومخصصة للاستخدام الشخصي. للاستفسارات المهنية أو المتعلقة بالمشاريع، تواصل عبر Discord أو Email."
+  },
+  "views": "مشاهدة",
+  "footer": { "designed": "تصميم وبرمجة Idom" }
+}
