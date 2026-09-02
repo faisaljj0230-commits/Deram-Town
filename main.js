@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   initLang();
 
+  // Navbar visual state on scroll
+  const navbar = document.getElementById("navbar");
+  const onScroll = () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 8);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
 
