@@ -1,0 +1,40 @@
+{
+  "nav": { "home": "Home", "about": "About", "skills": "Skills", "projects": "Projects", "systems": "Systems", "contact": "Contact" },
+  "hero": {
+    "status": "Available for Projects",
+    "role": "Software Developer",
+    "tagline": "Building Discord Bots, Websites & RP Systems.",
+    "bio": "I'm Faisal, also known as Idom. I'm a self-taught developer focused on building Discord bots, websites and custom RP systems.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "text": "Faisal, known as Idom, is a self-taught developer focused on Discord development, web development, RP systems, and custom systems."
+  },
+  "skills": { "title": "Skills" },
+  "build": {
+    "title": "What I Build",
+    "discord": { "title": "Discord Development", "desc": "Custom Discord bots, management, moderation, ticket and automation systems for servers." },
+    "rp": { "title": "RP Development", "desc": "Custom Roleplay systems and gameplay-related mechanics." },
+    "web": { "title": "Web Development", "desc": "Modern, professional websites and interfaces." },
+    "custom": { "title": "Custom Systems", "desc": "Custom systems built around a project's specific needs." }
+  },
+  "projects": { "title": "Projects", "soon": "SOON", "comingSoon": "More projects are coming soon." },
+  "systems": { "title": "RP Systems", "soon": "SOON", "comingSoon": "Custom RP systems are coming soon." },
+  "experience": {
+    "title": "Experience",
+    "selfTaught": { "title": "Self-Taught Developer", "desc": "Continuous learning and growth through personal projects and hands-on development." },
+    "discordDev": { "title": "Discord Development", "desc": "Building Discord bots and custom server systems." },
+    "rpDev": { "title": "RP Development", "desc": "Building RP systems and custom gameplay experiences." },
+    "current": { "title": "Current", "desc": "Working on bots, websites, and custom systems." }
+  },
+  "contact": {
+    "title": "Contact",
+    "discordLabel": "Discord",
+    "emailLabel": "Email",
+    "note": "Other accounts are private and intended for personal use only. For professional or project-related inquiries, please contact me through Discord or Email."
+  },
+  "views": "Views",
+  "footer": { "designed": "Designed & Developed by Idom" }
+}
