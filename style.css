@@ -41,18 +41,15 @@ body {
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
   background-image:
-    radial-gradient(ellipse 900px 520px at 80% -4%, rgba(255, 122, 26, 0.06), transparent 55%),
-    radial-gradient(ellipse 700px 500px at 2% 20%, rgba(255, 255, 255, 0.022), transparent 45%),
+    radial-gradient(ellipse 900px 520px at 80% -4%, rgba(255, 122, 26, 0.05), transparent 55%),
     repeating-linear-gradient(0deg, var(--grid-color) 0px, var(--grid-color) 1px, transparent 1px, transparent var(--grid-size)),
     repeating-linear-gradient(90deg, var(--grid-color) 0px, var(--grid-color) 1px, transparent 1px, transparent var(--grid-size));
   background-color: var(--bg);
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.14) 100%);
-  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.14) 100%);
 }
 
 img { max-width: 100%; display: block; }
