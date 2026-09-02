@@ -1,5 +1,6 @@
 const VIEWS_KEY = "idom-dev-portfolio-site-views";
 const VISITED_FLAG = "idom_has_visited";
+const VIEWS_CACHE = "idom_views_cache";
 const VIEWS_OFFSET = 9;
 
 async function loadViews() {
@@ -14,13 +15,17 @@ async function loadViews() {
     const res = await fetch(endpoint);
     const data = await res.json();
     const rawCount = Number(data.value) || 0;
-    el.textContent = rawCount + VIEWS_OFFSET;
+    const displayValue = rawCount + VIEWS_OFFSET;
+
+    el.textContent = displayValue;
+    localStorage.setItem(VIEWS_CACHE, String(displayValue));
 
     if (!alreadyVisited) {
       localStorage.setItem(VISITED_FLAG, "1");
     }
   } catch (err) {
-    el.textContent = "N/A";
+    const cached = localStorage.getItem(VIEWS_CACHE);
+    el.textContent = cached ? Number(cached) : 10;
   }
 }
 
