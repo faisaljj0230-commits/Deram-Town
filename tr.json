@@ -1,0 +1,40 @@
+{
+  "nav": { "home": "Ana Sayfa", "about": "Hakkımda", "skills": "Yetenekler", "projects": "Projeler", "systems": "Sistemler", "contact": "İletişim" },
+  "hero": {
+    "status": "Projelere Açığım",
+    "role": "Software Developer",
+    "tagline": "Discord Botları, Web Siteleri ve RP Sistemleri Geliştiriyorum.",
+    "bio": "Ben Faisal, diğer adımla Idom. Discord botları, web siteleri ve özel RP sistemleri geliştirmeye odaklanan kendi kendini yetiştirmiş bir geliştiriciyim.",
+    "viewProjects": "Projeleri Gör",
+    "contactMe": "Bana Ulaş"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "text": "Idom olarak bilinen Faisal, Discord geliştirme, web geliştirme, RP sistemleri ve özel sistemler üzerine odaklanan kendi kendini yetiştirmiş bir geliştiricidir."
+  },
+  "skills": { "title": "Yetenekler" },
+  "build": {
+    "title": "Neler Geliştiriyorum",
+    "discord": { "title": "Discord Geliştirme", "desc": "Sunucular için özel Discord botları, yönetim, moderasyon, ticket ve otomasyon sistemleri." },
+    "rp": { "title": "RP Geliştirme", "desc": "Özel Roleplay sistemleri ve oyun deneyimine yönelik mekanikler." },
+    "web": { "title": "Web Geliştirme", "desc": "Modern ve profesyonel web siteleri ve arayüzler." },
+    "custom": { "title": "Özel Sistemler", "desc": "Projenin ihtiyaçlarına özel geliştirilen sistemler." }
+  },
+  "projects": { "title": "Projeler", "soon": "YAKINDA", "comingSoon": "Yeni projeler yakında eklenecek." },
+  "systems": { "title": "RP Sistemleri", "soon": "YAKINDA", "comingSoon": "Özel RP sistemleri yakında eklenecek." },
+  "experience": {
+    "title": "Deneyim",
+    "selfTaught": { "title": "Kendi Kendini Yetiştirmiş Geliştirici", "desc": "Kişisel projeler ve uygulamalı geliştirme yoluyla sürekli öğrenme ve gelişim." },
+    "discordDev": { "title": "Discord Geliştirme", "desc": "Discord botları ve sunuculara özel sistemler geliştirme." },
+    "rpDev": { "title": "RP Geliştirme", "desc": "RP sistemleri ve özel oyun deneyimleri geliştirme." },
+    "current": { "title": "Şu An", "desc": "Botlar, web siteleri ve özel sistemler üzerinde çalışıyorum." }
+  },
+  "contact": {
+    "title": "İletişim",
+    "discordLabel": "Discord",
+    "emailLabel": "E-posta",
+    "note": "Diğer hesaplar özeldir ve yalnızca kişisel kullanım içindir. Profesyonel veya projeyle ilgili sorularınız için lütfen Discord veya E-posta üzerinden iletişime geçin."
+  },
+  "views": "Görüntülenme",
+  "footer": { "designed": "Idom tarafından tasarlandı ve geliştirildi" }
+}
