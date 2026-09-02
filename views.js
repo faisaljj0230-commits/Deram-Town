@@ -1,5 +1,6 @@
 const VIEWS_KEY = "idom-dev-portfolio-site-views";
 const VISITED_FLAG = "idom_has_visited";
+const VIEWS_OFFSET = 9;
 
 async function loadViews() {
   const el = document.getElementById("viewsCount");
@@ -12,7 +13,8 @@ async function loadViews() {
 
     const res = await fetch(endpoint);
     const data = await res.json();
-    el.textContent = data.value;
+    const rawCount = Number(data.value) || 0;
+    el.textContent = rawCount + VIEWS_OFFSET;
 
     if (!alreadyVisited) {
       localStorage.setItem(VISITED_FLAG, "1");
