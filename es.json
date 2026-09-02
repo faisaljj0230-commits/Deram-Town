@@ -1,0 +1,40 @@
+{
+  "nav": { "home": "Inicio", "about": "Sobre mí", "skills": "Habilidades", "projects": "Proyectos", "systems": "Sistemas", "contact": "Contacto" },
+  "hero": {
+    "status": "Disponible para Proyectos",
+    "role": "Software Developer",
+    "tagline": "Creando Bots de Discord, Sitios Web y Sistemas RP.",
+    "bio": "Soy Faisal, también conocido como Idom. Soy un desarrollador autodidacta enfocado en crear bots de Discord, sitios web y sistemas RP personalizados.",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "text": "Faisal, conocido como Idom, es un desarrollador autodidacta enfocado en desarrollo de Discord, desarrollo web, sistemas RP y sistemas personalizados."
+  },
+  "skills": { "title": "Habilidades" },
+  "build": {
+    "title": "Lo Que Desarrollo",
+    "discord": { "title": "Desarrollo en Discord", "desc": "Bots de Discord personalizados, gestión, moderación, sistemas de tickets y automatización para servidores." },
+    "rp": { "title": "Desarrollo RP", "desc": "Sistemas de Roleplay personalizados y mecánicas relacionadas con la jugabilidad." },
+    "web": { "title": "Desarrollo Web", "desc": "Sitios web e interfaces modernas y profesionales." },
+    "custom": { "title": "Sistemas Personalizados", "desc": "Sistemas a medida según las necesidades de cada proyecto." }
+  },
+  "projects": { "title": "Proyectos", "soon": "PRONTO", "comingSoon": "Más proyectos próximamente." },
+  "systems": { "title": "Sistemas RP", "soon": "PRONTO", "comingSoon": "Sistemas RP personalizados próximamente." },
+  "experience": {
+    "title": "Experiencia",
+    "selfTaught": { "title": "Desarrollador Autodidacta", "desc": "Aprendizaje y crecimiento continuo a través de proyectos personales y desarrollo práctico." },
+    "discordDev": { "title": "Desarrollo en Discord", "desc": "Creación de bots de Discord y sistemas personalizados para servidores." },
+    "rpDev": { "title": "Desarrollo RP", "desc": "Creación de sistemas RP y experiencias de juego personalizadas." },
+    "current": { "title": "Actualmente", "desc": "Trabajando en bots, sitios web y sistemas personalizados." }
+  },
+  "contact": {
+    "title": "Contacto",
+    "discordLabel": "Discord",
+    "emailLabel": "Correo",
+    "note": "Otras cuentas son privadas y de uso personal únicamente. Para consultas profesionales o relacionadas con proyectos, contáctame por Discord o Correo."
+  },
+  "views": "Visitas",
+  "footer": { "designed": "Diseñado y desarrollado por Idom" }
+}
